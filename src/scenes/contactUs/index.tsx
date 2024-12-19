@@ -1,20 +1,30 @@
-import { useForm } from "react-hook-form";
+import { useForm, SubmitHandler } from "react-hook-form";
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import ContactUsPageGraphic from "../../assets/ContactUsPageGraphаic.webp";
 import HText from "@/shared/HText";
 
-const ContactUs = ({ setSelectedPage }) => {
+interface ContactUsProps {
+  setSelectedPage: (page: SelectedPage) => void;
+}
+
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+const ContactUs: React.FC<ContactUsProps> = ({ setSelectedPage }) => {
   const inputStyles = `mb-5 w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-[#ff9548]`;
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<FormData>();
 
-  const onSubmit = (data) => {
+  const onSubmit: SubmitHandler<FormData> = (data) => {
     const { name, email, message } = data;
     const adminPhoneNumber = "918118846530"; // Admin's WhatsApp number
 
@@ -65,48 +75,40 @@ const ContactUs = ({ setSelectedPage }) => {
                 type="text"
                 placeholder="NAME"
                 {...register("name", {
-                  required: true,
-                  maxLength: 100,
+                  required: "This field is required.",
+                  maxLength: { value: 100, message: "Max length is 100 characters." },
                 })}
               />
               {errors.name && (
-                <p className="mt-1 text-primary-500">
-                  {errors.name.type === "required" && "This field is required."}
-                  {errors.name.type === "maxLength" && "Max length is 100 char."}
-                </p>
+                <p className="mt-1 text-primary-500">{errors.name.message}</p>
               )}
               <input
                 className={inputStyles}
                 type="text"
                 placeholder="EMAIL"
                 {...register("email", {
-                  required: true,
-                  pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  required: "This field is required.",
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    message: "Invalid email address.",
+                  },
                 })}
               />
               {errors.email && (
-                <p className="mt-1 text-primary-500">
-                  {errors.email.type === "required" && "This field is required."}
-                  {errors.email.type === "pattern" && "Invalid email address."}
-                </p>
+                <p className="mt-1 text-primary-500">{errors.email.message}</p>
               )}
-
               <textarea
                 className={inputStyles}
                 placeholder="MESSAGE"
                 rows={4}
                 cols={50}
                 {...register("message", {
-                  required: true,
-                  maxLength: 2000,
+                  required: "This field is required.",
+                  maxLength: { value: 2000, message: "Max length is 2000 characters." },
                 })}
               />
               {errors.message && (
-                <p className="mt-1 text-primary-500">
-                  {errors.message.type === "required" && "This field is required."}
-                  {errors.message.type === "maxLength" &&
-                    "Max length is 2000 char."}
-                </p>
+                <p className="mt-1 text-primary-500">{errors.message.message}</p>
               )}
               <button
                 type="submit"
