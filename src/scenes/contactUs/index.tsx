@@ -26,7 +26,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ setSelectedPage }) => {
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
     const { name, email, message } = data;
-    const adminPhoneNumber = "918118846530"; // Admin's WhatsApp number
+    const adminPhoneNumber = "919521692857"; // Admin's WhatsApp number
 
     const whatsappMessage = `Hello! You have a new contact form submission:\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
     const encodedMessage = encodeURIComponent(whatsappMessage);
