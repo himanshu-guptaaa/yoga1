@@ -7,24 +7,23 @@ const Footer = () => {
         <div className="mt-16 basis-1/2 md:mt-0">
           <img alt="logo" src={Logo} />
           <p className="my-5">
-            Lorem vitae ut augue auctor faucibus eget eget ut libero. Elementum
-            purus et arcu massa dictum condimentum. Augue scelerisque iaculis
-            orci ut habitant laoreet. Iaculis tristique.
+          Jai Shree Yog Sadhna Center, founded by Saroj Sharma in Jaipur, is dedicated to spreading the ancient practice of yoga for physical, mental, and spiritual well-being. The center offers specialized yoga training in Vinyasa, Hatha, and Ashtanga yoga, with classes tailored for individuals of all skill levels. With a serene environment and expert guidance, it is a hub for holistic health and self-discovery.
           </p>
-          <p>©Mantra All Rights Reserved.</p>
+          <p>©Jay Shree Yoga Sadhna Center.</p>
         </div>
-        <div className="mt-16 basis-1/4 md:mt-0">
-          <h4 className="font-bold">Articles</h4>
-          <p className="my-5">Massa orci senectus</p>
-          <p className="my-5">Et gravida id et etiam</p>
-          <p>Ullamcorper vivamus</p>
-        </div>
+        
         <div className="mt-16 basis-1/4 md:mt-0">
           <h4 className="font-bold">Contacts</h4>
-          <p className="my-5">Tempus metus mattis risus volutpat egestas gravida id et etiam.</p>
-          <p>(050)505-0505</p>
+          <p className="my-5">Jhule lal Temple near basbadanpura Delhi Road Jaipur</p>
+          <p>(+01) 9829015244</p>
         </div>
       </div>
+      <div className="mt-16 basis-1/4 md:mt-0">
+          <h4 className="font-bold">Developed by</h4>
+          <p className="my-5">Himanshu Gupta</p>
+          <p className="my-5">8000739398</p>
+          <p>Ullamcorper vivamus</p>
+        </div>
     </footer>
   );
 };

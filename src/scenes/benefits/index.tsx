@@ -110,18 +110,11 @@ const Benefits = ({ setSelectedPage }: Props) => {
               }}
             >
               <p className="my-5">
-                Nascetur aenean massa auctor tincidunt. Iaculis potenti amet
-                egestas ultrices consectetur adipiscing ultricies enim. Pulvinar
-                fames vitae vitae quis. Quis amet vulputate tincidunt at in
-                nulla nec. Consequat sed facilisis dui sit egestas ultrices
-                tellus. Ullamcorper arcu id pretium sapien proin integer nisl.
-                Felis orci diam odio.
-              </p>
-              <p className="mb-5">
-                Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est
-                tellus quam porttitor. Mauris velit euismod elementum arcu neque
-                facilisi. Amet semper tortor facilisis metus nibh. Rhoncus sit
-                enim mattis odio in risus nunc.
+              Saroj Sharma is a dedicated and certified yoga instructor with over a decade of experience in guiding individuals toward mental, physical, and spiritual harmony. Specializing in Vinyasa, Hatha, and Ashtanga yoga, she has a passion for promoting holistic wellness. A world record holder in Parshva Janu Shirshasana Yoga, Saroj has been recognized for her exceptional flexibility, endurance, and breath control.
+
+She has conducted diverse yoga classes for all levels, from beginners to advanced practitioners, focusing on mindfulness, flexibility, and strength. Saroj's contributions to yoga and wellness have been featured in ABVP News, and she has successfully trained countless clients to achieve their fitness and wellness goals.
+
+Saroj is also the founder of Jai Shree Yog Sadhna Center in Jaipur, where she organizes yoga retreats, mindfulness workshops, and personalized yoga sessions. With expertise in pranayama, meditation, and injury rehabilitation, she combines her knowledge of human anatomy with a deep understanding of stress management techniques to provide a comprehensive wellness experience.
               </p>
             </motion.div>
             <div className="relative mt-16">

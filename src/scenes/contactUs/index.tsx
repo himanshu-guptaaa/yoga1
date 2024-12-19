@@ -52,10 +52,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ setSelectedPage }) => {
             <span className="text-primary-500">JOIN US</span> TO GET IN SHAPE
           </HText>
           <p className="my-5">
-            Congue adipiscing risus commodo placerat. Tellus et in feugiat nisl
-            sapien vel rhoncus. Placerat at in enim pellentesque. Nulla adipiscing leo
-            egestas nisi elit risus sit. Nunc cursus sagittis.
-          </p>
+            Share Your information to conatct us and write down your message or any query for Yoga classes that can change your life fit and healty.          </p>
         </motion.div>
         <div className="mt-10 justify-between gap-14 md:flex flex-row-reverse">
           <motion.div
